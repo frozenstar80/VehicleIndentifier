@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/anprFragment">
+
+
+    <fragment
+        android:id="@+id/anprFragment"
+        android:name="com.example.vehicleindentifier.fragment.AnprFragment"
+        android:label="ANPR Capture">
+        <action
+            android:id="@+id/action_anprFragment_to_userDataFragment"
+            app:destination="@id/userDataFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/userDataFragment"
+        android:name="com.example.vehicleindentifier.fragment.UserDataFragment"
+        android:label="fragment_user_data"
+        tools:layout="@layout/fragment_user_data" />
+</navigation>
